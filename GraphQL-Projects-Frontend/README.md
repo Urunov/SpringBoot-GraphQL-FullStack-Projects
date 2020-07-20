@@ -14,7 +14,7 @@
    | Tool | Visual Studio Code |
  
  
- 1. Part-1.GraphQL-HelloWorld
+## 1. Part-1.GraphQL-HelloWorld
  
  Step by Step explanation: 
  --------------------------------------------------------
@@ -23,22 +23,26 @@
 
   Open Visual Studio Code (VSC) and typing this command by( terminal)  
     2. Terminal type the same command
-     --> yarn init -y
-     --> yarn add apollo-server graphql
+    
+         --> yarn init -y
+
+         --> yarn add apollo-server graphql
   
   3. create folder (src) and index.js. You may use abover source code. After finished, back your terminal
-     --> node src/index.js
+         
+         --> node src/index.js
 
-  4. localhost:4000/ 
-     # open your broweser.
-        query {
-           hello
-        }
+  4. localhost:4000
+
+            -> open your broweser.
+                query {
+                   hello
+                }
    
    
 -------------------------------------------------------------------------------------   
    
-# 2. Part-2.GraphQL-Functions-Types
+## 2. Part-2.GraphQL-Functions-Types
  
  * Open VSC and typing this command by( terminal)  
   1. Terminal type the same command (Auto server recompile without restart)
