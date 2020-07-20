@@ -18,19 +18,22 @@
  
  Step by Step explanation: 
  --------------------------------------------------------
-    *  Open the web site and make sure / Get started
-        1. [graphql.org] (graphql.org)
-    *  Open Visual Studio Code (VSC) and typing this command by( terminal)  
-        2. Terminal type the same command
-         --> yarn init -y
-         --> yarn add apollo-server graphql
-        3. create folder (src) and index.js. You may use abover source code. After finished, back your terminal
-         --> node src/index.js
-        4. localhost:4000/ 
-         # open your broweser.
-            query {
-               hello
-            }
+  Open the web site and make sure / Get started
+    1. [graphql.org] (graphql.org)
+
+  Open Visual Studio Code (VSC) and typing this command by( terminal)  
+    2. Terminal type the same command
+     --> yarn init -y
+     --> yarn add apollo-server graphql
+  
+  3. create folder (src) and index.js. You may use abover source code. After finished, back your terminal
+     --> node src/index.js
+
+  4. localhost:4000/ 
+     # open your broweser.
+        query {
+           hello
+        }
    
    
 -------------------------------------------------------------------------------------   
@@ -55,4 +58,4 @@
     
    
    
-2. FullStack projects Spring Boot and GraphQL 
+# 2. FullStack projects Spring Boot and GraphQL 
