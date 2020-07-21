@@ -1,80 +1,65 @@
 const{ApolloServer, gql} =require("apollo-server");
 
-/**
- * 
- *  ->  type checking
- *  ->  query vs. mutation
- *  ->  objects
- *  ->  arrays
- *  ->  arguments
- *  ->  crud 
-*/
+ 
+    // type checking
+    // query vs. mutation
+    //  objects
+    //  arrays
+    //  arguments
+    //  crud 
 
 
 const typeDefs = gql`
-    type Query {
-        hello: String!
-         
-    }
-    type User {
-        id: ID!
-        username: String!    
-    }
 
-    type Error {
-        field: String!
-        message: String!
-    }
+        type Query {
+            hello: String!
+            
+        }
 
-    type RegisterResponse {
-        errors: [Error!]!
-        user: User
-    }
+        type User {
+            id: ID!
+            username: String!    
+        }
 
-    input UserInfo {
-        username: String!
-        password: String!
-        age: Int
-    }
+        type Mutation {
+            register: User
+        }
 
-    type Mutation {
-        register(userInfo: UserInfo!): RegisterResponse!
-        login(userInfo: UserInfo): Boolean!
-    }
+        type Error{
+            field: String!
+            message: String!
+        }
+
+        type RegisterResponse{
+            errors: [Error]
+            user: User
+        }
     `;
 
-const resolvers = {
-    Query:{
-        hello: () => "Hello Friends! ",
-        user: () => ({
-            id: 1, 
-            username: "Hamdamboy"
-        })
-    },
+    const resolvers = {
+    
+        Query:{
+            hello: () => "Hello Friends! "
+        },
+        
+        Mutation: {
+            register: () => ({
 
-    Mutation: {
-        login:() => true,
-
-        register:()=> ({
-
-            errors:
-            [
-                {
-                    field: "username",
-                    message: "Please, update data..."
-                },
-                {
-                    field: "username2",
-                    message: "Bad2"
-                }    
-            ],
-            user: {
-                id: 1,
-                username: "Halid"
-            }    
-        })
-    }
-};
+                errors: null,
+                // errors: [
+                //     {
+                //         field: 'username',
+                //         message: 'Bad values'
+                //     }
+                // ],
+                user:{
+                    id: 1,
+                    username: "Hamdamboy"
+                }
+               
+            })
+        }
+    };
 
 const server = new ApolloServer({typeDefs, resolvers});
 
