@@ -1,4 +1,4 @@
-# Spring Boot + GraphQL + MySQL example
+# Spring Boot + GraphQL + MySQL (Backend and Frontend)
 
 
 
