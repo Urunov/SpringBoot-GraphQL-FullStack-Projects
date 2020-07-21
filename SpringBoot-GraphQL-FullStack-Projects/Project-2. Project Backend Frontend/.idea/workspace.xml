@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e047498-97d8-4791-a852-c55b2d00dabd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bezkoder/springgraphql/mysql/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bezkoder/springgraphql/mysql/model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bezkoder/springgraphql/mysql/model/Tutorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bezkoder/springgraphql/mysql/model/Tutorial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
@@ -59,6 +60,7 @@
       <workItem from="1595311979724" duration="317000" />
       <workItem from="1595312316448" duration="4111000" />
       <workItem from="1595323954239" duration="1122000" />
+      <workItem from="1595326828745" duration="606000" />
     </task>
     <servers />
   </component>
