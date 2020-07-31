@@ -66,12 +66,24 @@
 ![GraphQL SpringBoot](https://user-images.githubusercontent.com/11626327/87937048-e60e6c00-cace-11ea-8760-a7fb7ebb2502.PNG)
 --------------------------------------------------------------------------------------
    
-   
-# 2. FullStack projects Spring Boot and GraphQL 
+  
 
+# Part-5.Spring Boot and GraphQL project 
+
+   ## Adding Maven Dependencies 
+    * Create a sample Spring Boot application and add the following dependencies.
+       -> graphql-spring-boot-starter is used for enabling GraphQL servlet and it becomes available at a path /graphql. It initializes GraphQLSchema bean.
+       -> graphql-java allows to write schema with GraphQL schema language which is simple to understand.
+    graphiql-spring-boot-starter provides user interface using which we could test our GraphQL queries and view query definition.
+    
+ [Resource](https://itnext.io/beginners-guide-to-graphql-with-spring-boot-69d229e87b19) 
+    
+-------------------------
 ## Resources 
 1. [GraphQL for beginner](https://www.youtube.com/watch?v=Y78PadVft7I&list=PLN3n1USn4xln0j_NN9k4j5hS1thsGibKi&index=2)
 2. [Moving Existing API From REST To GraphQL](https://www.youtube.com/watch?v=broQmxQAMjM)
 3. [Spring Boot and GraphQL](https://www.viralpatel.net/graphql-spring-boot-tutorial/)
+4. [Beginener to Super advanced](https://itnext.io/beginners-guide-to-graphql-with-spring-boot-69d229e87b19)
+
 
 
