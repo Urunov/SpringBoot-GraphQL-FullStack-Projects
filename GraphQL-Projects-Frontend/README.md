@@ -66,12 +66,9 @@
 ![GraphQL SpringBoot](https://user-images.githubusercontent.com/11626327/87937048-e60e6c00-cace-11ea-8760-a7fb7ebb2502.PNG)
 --------------------------------------------------------------------------------------
    
-   
-# 2. FullStack projects Spring Boot and GraphQL 
+  
 
-
-
-# 5.Spring Boot and GraphQL project 
+# Part-5.Spring Boot and GraphQL project 
 
    ## Adding Maven Dependencies 
     * Create a sample Spring Boot application and add the following dependencies.
