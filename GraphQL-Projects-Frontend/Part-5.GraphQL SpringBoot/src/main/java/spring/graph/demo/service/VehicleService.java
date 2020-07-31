@@ -1,34 +1,32 @@
-package spring.graphql.Graph;
+package spring.graph.demo.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import spring.graphql.Vehicle;
-import spring.graphql.VehicleRepository;
-
+import spring.graph.demo.entity.Vehicle;
+import spring.graph.demo.repository.VehicleRepository;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Author: apple
- * @created on 30/07/2020
- * @Project is GraphQl
+ * @created on 31/07/2020
+ * @Project is SpringGraphql
  */
 @Service
 public class VehicleService {
 
     private final VehicleRepository vehicleRepository;
 
-    public VehicleService(final VehicleRepository vehicleRepository) {
+    public VehicleService(final VehicleRepository vehicleRepository){
         this.vehicleRepository = vehicleRepository;
     }
 
     @Transactional
     public Vehicle createVehicle(final String type, final String modelCode, final String brandName, final String launchDate){
         final Vehicle vehicle = new Vehicle();
-
         vehicle.setType(type);
         vehicle.setModelCode(modelCode);
         vehicle.setBrandName(brandName);
@@ -37,14 +35,13 @@ public class VehicleService {
         return this.vehicleRepository.save(vehicle);
     }
 
-
     @Transactional(readOnly = true)
-    public List<Vehicle> getAllVehicles(final int count) {
+    public List<Vehicle> getAllVehicle(final int count){
         return this.vehicleRepository.findAll().stream().limit(count).collect(Collectors.toList());
     }
+
     @Transactional(readOnly = true)
     public Optional<Vehicle> getVehicle(final int id) {
         return this.vehicleRepository.findById(id);
     }
-
 }
