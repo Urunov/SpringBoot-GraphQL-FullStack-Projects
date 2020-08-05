@@ -1,16 +1,20 @@
 package com.online.graphql.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @Author: apple
  * @created on 04/08/2020
  * @Project is version1_7_step
  */
-
+@Data
 @Entity
 @Table(name = "orders")
-public class Order {
+public class Order  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,11 +38,12 @@ public class Order {
 
     //private Date creation_date;
 
-   /* @ManyToOne(fetch = FetchType.LAZY)
-      @JoinColumn(name = "product_id")
+     @ManyToOne(fetch = FetchType.LAZY)
+    //  @JoinColumn(name = "product_id")
+     @JsonIgnore
       private Product product;
 
-    */
+
 
     public Long getId() {
         return id;

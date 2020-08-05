@@ -1,10 +1,15 @@
 package com.online.graphql.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "products")
 public class Product {
@@ -173,15 +178,17 @@ public class Product {
     }
 
 
-   /* @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "category_id")
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+   // @JoinColumn(name = "category_id")
+    @JsonIgnore
     private Category categories;
 
 
 
-   @OneToMany(fetch = FetchType.LAZY, mappedBy = "orderProducts")
-   @JoinColumn(name = "order_id")
+   @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+  // @JoinColumn(name = "order_id")
+   @JsonIgnore
    private List<Order> orders = new ArrayList<>();
 
-   */
+
 }

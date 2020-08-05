@@ -1,6 +1,10 @@
 package com.online.graphql.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,9 +12,10 @@ import java.util.List;
  * @created on 03/08/2020
  * @Project is version1_7_step
  */
+@Data
 @Entity
 @Table(name = "category")
-public class Category {
+public class Category  {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -94,10 +99,11 @@ public class Category {
                 '}';
     }
 
-    /*@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "categories")
-    @JoinColumn(name = "product_id")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "categories")
+   // @JoinColumn(name = "product_id")
+    @JsonIgnore
     private List<Product> products;
 
-     */
+
 }
 
