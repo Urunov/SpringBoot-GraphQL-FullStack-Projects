@@ -1,0 +1,58 @@
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+#--------------------------------
+type Category {
+
+    id: ID!
+    name: String!
+    value:String!
+    slug: String!
+    type: String!
+    icon: String!
+
+}
+#--------------------------------
+
+type Query {
+    category(id: ID!): Category
+    allCategory: [Category]
+}
+#------------------------------
+
+type Mutation {
+
+    createCategory(input: CreateProductInput!) : Category!
+    deleteCategory(id: ID!): Boolean
+    updateName(input: UpdateCategoryInput!) : Category!
+
+}
+#------------------------------
+
+input CreateProductInput {
+
+     name: String!
+       value:String!
+       slug: String!
+       type: String!
+       icon: String!
+ }
+
+
+#--------------------------
+input UpdateCategoryInput{
+
+    id: ID!
+    name: String!
+    value:String!
+    slug: String!
+    type: String!
+    icon: String!
+
+
+ }
+
+

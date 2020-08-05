@@ -1,0 +1,185 @@
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+#--------------------------------
+
+type Query {
+    product(id: ID!): Product
+    allProduct: [Product]
+
+    category(id: ID!): Category
+    allCategory: [Category]
+
+    order(id: ID!): Order
+    allOrders: [Order]
+
+}
+#------------------------------
+
+type Mutation {
+
+#------------Category---------------------
+
+    createProduct(input: CreateProductInput!) : Product!
+    deleteProduct(id: ID!): Boolean
+    updateProductName(input: UpdateProductNameInput!) : Product!
+    updatePrice(input: UpdateProductPriceInput!): Product!
+
+#------------Category---------------------
+
+    createCategory(input: CreateCategoryInput!) : Category!
+    deleteCategory(id: ID!): Boolean
+    updateCategoryName(input: UpdateCategoryNameInput!) : Category!
+#-------------------------Order---------------------
+
+    createOrder(input: CreateOrderInput!) : Order!
+    deleteOrder(id: ID!): Boolean
+    updateOrderName(input: UpdateOrderNameInput!) : Order!
+
+}
+
+#--------------------------------
+type Product {
+
+    id: ID!
+    name: String!
+    slug: String!
+    image:String!
+    type: String!
+    unit: String!
+    price: Int!
+    salePrice: Float!
+    disc_in_pros: Int!
+    per_unit: Int!
+    quantity: Int!
+    description:String!
+}
+#------------------------------
+
+input CreateProductInput {
+
+    name: String!
+    slug: String!
+    image:String!
+    type: String!
+    unit: String!
+    price: Int!
+    salePrice: Float!
+    disc_in_pros: Int!
+    per_unit: Int!
+    quantity: Int!
+    description:String!
+
+ }
+#--------------------------
+input UpdateProductNameInput{
+
+    id: ID!
+    name: String!
+    slug: String!
+    image: String!
+    type: String!
+    unit: String!
+    description: String!
+
+ }
+
+
+input UpdateProductPriceInput{
+
+    id: ID!
+    price: Int!
+    salePrice: Float!
+    disc_in_pros: Int!
+    per_unit: Int!
+    quantity: Int!
+
+}
+
+#-------- Category ------
+
+type Category {
+
+    id: ID!
+    name: String!
+    value:String!
+    slug: String!
+    type: String!
+    icon: String!
+
+}
+#--------------------------------
+
+    input CreateCategoryInput {
+
+           name: String!
+           value:String!
+           slug: String!
+           type: String!
+           icon: String!
+     }
+
+#--------------------------
+    input UpdateCategoryNameInput{
+
+        id: ID!
+        name: String!
+        value:String!
+        slug: String!
+        type: String!
+        icon: String!
+    }
+
+#-------- Order ------
+
+ type Order {
+
+     id: ID!
+     payment_method: String!
+     contact_number:String!
+     delivery_address: String!
+     status: String!
+     description: String!
+     amount: Float!
+     discount: String!
+     delivery_fee: Int!
+ }
+#---------------*()-----------------
+
+ input CreateOrderInput {
+
+     payment_method: String!
+     contact_number:String!
+     delivery_address: String!
+     status: String!
+     description: String!
+     amount: Float!
+     discount: String!
+     delivery_fee: Int!
+
+  }
+
+
+#--------------------------
+ input UpdateOrderNameInput{
+
+      id: ID!
+      payment_method: String!
+      contact_number:String!
+      delivery_address: String!
+      status: String!
+      description: String!
+      discount: String!
+
+  }
+
+  input UpdateOrderFeeInput{
+
+       id: ID!
+       amount: Float!
+       delivery_fee: Int!
+
+  }
