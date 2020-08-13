@@ -1,3 +1,6 @@
+
+# Useful references and source structure
+
 [![Build Status](https://travis-ci.org/graphql-java-kickstart/graphql-spring-boot.svg?branch=master)](https://travis-ci.org/graphql-java-kickstart/graphql-spring-boot)
 [![Maven Central](https://img.shields.io/maven-central/v/com.graphql-java-kickstart/graphql-spring-boot-starter.svg)](https://maven-badges.herokuapp.com/maven-central/com.graphql-java-kickstart/graphql-spring-boot-starter)
 [![Chat on Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/graphql-java-kickstart/Lobby)
@@ -23,4 +26,6 @@ The Project provides mainly  2 folders.
 Resource: 
  1. [Getting started with GraphQL Java and Spring Boot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/#try-out-the-api)
  2. [GraphQL Architecture](https://www.howtographql.com/basics/3-big-picture/)
- 3. 
+ 3. [Graphql Kickstart important](https://graphql-java-kickstart.com/tools/schema-definition/)
+ 4. [GraphQL Schema](https://www.tutorialspoint.com/graphql/graphql_schema.htm)
+ 5. 
