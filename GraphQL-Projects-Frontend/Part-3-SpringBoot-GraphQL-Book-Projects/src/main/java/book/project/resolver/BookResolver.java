@@ -17,4 +17,7 @@ public class BookResolver implements GraphQLQueryResolver {
         return new Book("Learn GraphQL Perfectly, ",  "9302333232");
     }
 
+    public Book getBook(){
+        return new Book();
+    }
 }

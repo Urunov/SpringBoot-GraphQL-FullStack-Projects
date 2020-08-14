@@ -1,5 +1,7 @@
 package book.project.model;
 
+import java.time.LocalDate;
+
 /**
  * @Author: apple
  * @created on 13/08/2020
@@ -9,6 +11,16 @@ public class BookWrapper {
 
     private String title;
     private String isbn;
+    private LocalDate publishedDate;
+
+
+    public LocalDate getPublishedDate() {
+        return publishedDate;
+    }
+
+    public void setPublishedDate(LocalDate publishedDate) {
+        this.publishedDate = publishedDate;
+    }
 
     public String getTitle() {
         return title;

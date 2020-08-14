@@ -1,0 +1,6 @@
+query getBook($isbn: String!) {
+    getBook(isbn: $isbn) {
+        title
+        isbn
+    }
+}
