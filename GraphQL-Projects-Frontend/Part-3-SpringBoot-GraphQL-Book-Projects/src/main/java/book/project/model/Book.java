@@ -1,6 +1,7 @@
 package book.project.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
@@ -14,7 +15,6 @@ public class Book {
 
 
     private String title;
-
     @Id
     private String isbn;
 
@@ -24,13 +24,15 @@ public class Book {
                     CascadeType.MERGE
             },
             fetch = FetchType.EAGER)
+
     @JoinTable(
             name = "book_author",
             joinColumns = @JoinColumn(name = "isbn"),
             inverseJoinColumns = @JoinColumn(name = "author_id")
     )
-
     private Set<Author> authors;
+    private LocalDate publishedDate;
+
 
     public Book(Set<Author> authors) {
         this.authors = authors;
@@ -72,5 +74,13 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public LocalDate getPublishedDate() {
+        return publishedDate;
+    }
+
+    public void setPublishedDate(LocalDate publishedDate) {
+        this.publishedDate = publishedDate;
     }
 }

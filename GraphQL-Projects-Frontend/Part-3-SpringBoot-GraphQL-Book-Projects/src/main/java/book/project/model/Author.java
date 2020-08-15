@@ -1,7 +1,6 @@
 package book.project.model;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -24,6 +23,7 @@ public class Author {
             },
             mappedBy = "authors"
     )
+
     private Set<Book> books;
 
     public Author() {

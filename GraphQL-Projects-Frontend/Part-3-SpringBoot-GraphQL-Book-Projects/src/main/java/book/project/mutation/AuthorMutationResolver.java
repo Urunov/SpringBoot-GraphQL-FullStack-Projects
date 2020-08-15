@@ -26,9 +26,7 @@ public class AuthorMutationResolver implements GraphQLMutationResolver {
 
     public Author createAuthor(AuthorWrapper wrapper){
         Author author = new Author(wrapper.getName());
-
         author.setId(UUID.randomUUID().getLeastSignificantBits());
-
         return repository.save(new Author(wrapper.getName()));
     }
 }

@@ -1,8 +1,11 @@
+scalar LocalDate
+
     type Book {
 
         title:String!
         isbn: String!
         authors: [Author]
+        publishedDate: LocalDate
     }
 
     type Author  {
@@ -13,6 +16,8 @@
     type Query {
 
         getBook (isbn: String!): Book
+        books(first: Int, after: String): BookConnection @connection(for: "Book")
+
     }
 
     type Mutation {
@@ -30,5 +35,6 @@
     input BookWrapper {
         title: String!
         isbn: String!
+        publishedDate: LocalDate
     }
 

@@ -10,8 +10,9 @@ import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * @Author: apple
@@ -40,9 +41,10 @@ public class BookMutationResolver implements GraphQLMutationResolver {
 
         Optional<Author> author = authorRepository.findById(authorId);
         Optional<Book> book = bookRespository.findById(isbn);
-
-        if(author.isPresent() && book.isPresent()) {
-            book.get().setAuthors(Collections.singletonMap(author.get()));
+        if (author.isPresent() && book.isPresent()) {
+            Set<Author> authors = new HashSet<>();
+            authors.add(author.get());
+            book.get().setAuthors(authors);
             bookRespository.save(book.get());
             return book.get();
         }
