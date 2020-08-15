@@ -65,9 +65,16 @@
 [Spring Boot and GraphQL ](https://www.viralpatel.net/graphql-spring-boot-tutorial/)
 ![GraphQL SpringBoot](https://user-images.githubusercontent.com/11626327/87937048-e60e6c00-cace-11ea-8760-a7fb7ebb2502.PNG)
 --------------------------------------------------------------------------------------
+# Part-3. Spring Boot GraphQL project (API)
    
+    * Create Book and Update 
+    * Adding Author
+    * POSTMAN
+    * H2 DB
+    
+<img width="1280" alt="Screen Shot 2020-08-14 at 3 11 30 PM" src="https://user-images.githubusercontent.com/11626327/90311681-8faf1480-df38-11ea-9c0e-862c3aaa4307.png">
   
-
+-------------------------
 # Part-5.Spring Boot and GraphQL project 
 
    ## Adding Maven Dependencies 
