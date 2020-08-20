@@ -1,24 +1,27 @@
-
-# Useful references and source structure
-
 [![Build Status](https://travis-ci.org/graphql-java-kickstart/graphql-spring-boot.svg?branch=master)](https://travis-ci.org/graphql-java-kickstart/graphql-spring-boot)
 [![Maven Central](https://img.shields.io/maven-central/v/com.graphql-java-kickstart/graphql-spring-boot-starter.svg)](https://maven-badges.herokuapp.com/maven-central/com.graphql-java-kickstart/graphql-spring-boot-starter)
 [![Chat on Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/graphql-java-kickstart/Lobby)
 
+# Project Map instruction road.   
 
-# SpringBoot-GraphQL-FullStack-Projects
-----------
-
-## GraphQL layer that integrates existing systems
-
-![Screen Shot 2020-08-12 at 4 04 28 PM](https://user-images.githubusercontent.com/11626327/89985178-9ed26000-dcb5-11ea-9e69-262e16857927.png)
-
-
-The Project provides mainly  2 folders.
-
-1. GraphQL Project Frontend
-
-2. FullStack projects Spring Boot and GraphQL 
+   - [GraphQL-Projects-Frontend](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend)
+      * Part-1.GraphQL-HelloWorld (more detail explanation included: [intial step](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-1.GraphQL-HelloWorld))
+      * Part-2.GraphQL-Functions-Types (using function road map: [resource](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-2.GraphQL-Functions-Types))
+      * Part-3-SpringBoot-GraphQL-Book-Projects (example project: Spring Boot GraphQL POSTMAN [API](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-3-SpringBoot-GraphQL-Book-Projects))
+      * Part-4. Pending....
+      * Part-5.GraphQL SpringBoot (Depedency configuration, pox.xml; [data integration](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-5.GraphQL%20SpringBoot))
+      
+      
+      
+   - [Spring-Boot-Graphql-MySQL-Hibernate-JPA](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/Spring-Boot-Graphql-MySQL-Hibernate-JPA)
+       * The example defines a basic JPA annontated data model containing a single entity, Person. When spring-boot runs it takes that entity definition and creates an in-memory H2 embedded [database with pre-poluated dummy data](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/Spring-Boot-Graphql-MySQL-Hibernate-JPA).
+   
+   - [SpringBoot-GraphQL-FullStack-Projects](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/SpringBoot-GraphQL-FullStack-Projects)
+       * Project-1. Book-Store-SpringBoot-GraphQL (testing project: [resource](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/SpringBoot-GraphQL-FullStack-Projects/Project-1.%20Book-Store-SpringBoot-GraphQL))
+       * Project-2. Project Backend Frontend (DB integration and testing API : [resource included](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/SpringBoot-GraphQL-FullStack-Projects/Project-2.%20Project%20Backend%20Frontend))
+       * Project-3. Spring Boot React Graphql Hibernate (Shopping Mall: [resource ](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/SpringBoot-GraphQL-FullStack-Projects/Project-3.%20Spring%20Boot%20React%20Graphql%20Hibernate))
+       * Project -4. SpringBoot GraphQL Error Handler (testing project, error handling and [improve configuration test case](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/SpringBoot-GraphQL-FullStack-Projects/Project-4.%20SpriungBoot%20GraphQL%20Error%20Handler))
+       * Project-5. SpringBoot GraphQL Secure Test (Includec Secure and Testing Case [represented](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/SpringBoot-GraphQL-FullStack-Projects/Project-5.%20SpringBoot%20GraphQL%20Secure%20Test))
 
 --------------------------
 
@@ -28,4 +31,4 @@ Resource:
  2. [GraphQL Architecture](https://www.howtographql.com/basics/3-big-picture/)
  3. [Graphql Kickstart important](https://graphql-java-kickstart.com/tools/schema-definition/)
  4. [GraphQL Schema](https://www.tutorialspoint.com/graphql/graphql_schema.htm)
- 5. 
+ 5. [Spring Boot GraphQL Error Handling and Secure ](https://medium.com/@philippechampion58/testing-your-graphql-apis-in-a-spring-boot-app-9fe02ebccc35)
