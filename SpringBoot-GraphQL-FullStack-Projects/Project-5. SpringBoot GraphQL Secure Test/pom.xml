@@ -8,21 +8,19 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>spring</groupId>
-    <artifactId>graphql</artifactId>
+    <groupId>graphql</groupId>
+    <artifactId>error</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>graphql</name>
-    <description>Demo project for Spring Boot</description>
+    <name>error</name>
+    <description>GrahpQL project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <graphql.kickstart.version>6.0.0</graphql.kickstart.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,6 +38,51 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
+
+        <!--GraphQL maven -->
+
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>6.0.0</version>
+        </dependency>
+        <!-- to embed GraphiQL tool -->
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphiql-spring-boot-starter</artifactId>
+            <version>6.0.0</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- GraphQL testing facilities -->
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphql-spring-boot-starter-test</artifactId>
+            <version>6.0.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.3.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <version>5.0.4.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
