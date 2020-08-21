@@ -1,0 +1,26 @@
+
+# The Root Query for the application
+
+type Query {
+
+    allLanguage: [Language]
+    language(id: ID!): Language
+    languageType(languageType: String!): [Language]
+}
+
+# The Root Mutation for the application
+
+type Mutation {
+
+    createLanguage(name: String, code: String, color: String, languageType: String): Language!
+    updateLanguage(id: ID!, name: String, code: String, color: String, languageType: String): Language!
+    deleteLanguage(id:ID!): Boolean
+}
+
+type Language{
+    id: ID!
+    name: String
+    code: String
+    color: String
+    languageType: String
+}
