@@ -8,7 +8,7 @@
       * Part-1.GraphQL-HelloWorld (more detail explanation included: [intial step](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-1.GraphQL-HelloWorld))
       * Part-2.GraphQL-Functions-Types (using function road map: [resource](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-2.GraphQL-Functions-Types))
       * Part-3-SpringBoot-GraphQL-Book-Projects (example project: Spring Boot GraphQL POSTMAN [API](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-3-SpringBoot-GraphQL-Book-Projects))
-      * Part-4. Pending....
+      * Part-4. Spring Boot GraphQL MySQL Hibernate (more detail [resolvers](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-4.SpringBoot-GraphQL-MySQL-Hibernate-Project))
       * Part-5.GraphQL SpringBoot (Depedency configuration, pox.xml; [data integration](https://github.com/Urunov/SpringBoot-GraphQL-FullStack-Projects/tree/master/GraphQL-Projects-Frontend/Part-5.GraphQL%20SpringBoot))
       
       
