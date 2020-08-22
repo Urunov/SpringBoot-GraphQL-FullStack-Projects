@@ -1,20 +1,21 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
 type Project {
     id: ID!
-    title: String
-    description: String
-    language: Language
-    user: User
+    title: String!
+    description: String!
+
 }
 
-extend type Query {
-    allProducts: [Project]
+type Query {
+#    allProducts: [Project]
     project(id: ID!): Project
-    userProjects(userId: ID!):[Project]
+
 }
+type Mutation {
 
-extend type Mutation {
-
-    createProject(title: String, description: String, language: ID!, user: ID!): Project!
-    updateProject(id:ID!, title: String, description: String, language: ID!, user: ID): Project!
-    deleteProject(id: ID!): Boolean
+      deleteProject(id: ID!): Boolean
 }
