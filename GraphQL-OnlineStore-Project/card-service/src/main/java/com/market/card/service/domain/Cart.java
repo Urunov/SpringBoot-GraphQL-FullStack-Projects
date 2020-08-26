@@ -14,15 +14,15 @@ import java.util.List;
  */
 @Data
 @Entity
-@Table
+@Table(name = "cart")
 public class Cart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<Item> items = new ArrayList<>();
-
 
     public BigDecimal getSubTotal() {
         return getItems().stream()

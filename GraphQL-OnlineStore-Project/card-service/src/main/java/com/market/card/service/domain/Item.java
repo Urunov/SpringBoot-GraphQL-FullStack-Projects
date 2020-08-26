@@ -31,9 +31,10 @@ public class Item {
     private BigDecimal total;
 
 
-    Item(String productId, BigDecimal productPrice, int quantity){
+    public Item(String productId, BigDecimal productPrice, int quantity){
         this.productId = productId;
         this.quantity = quantity;
         val bigDecimal = this.total = BigDecimal.valueOf(quantity).multiply(productPrice);
     }
+
 }

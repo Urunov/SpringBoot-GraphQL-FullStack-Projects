@@ -1,8 +1,9 @@
 package com.market.card.service.deps;
 
+import com.market.product.service.domain.Product;
 import org.springframework.web.client.RestTemplate;
 
-import javax.xml.ws.Service;
+import java.net.URI;
 
 /**
  * @Author: apple
@@ -13,8 +14,18 @@ public class ProductServiceRestClient {
 
     private final RestTemplate http;
 
-    private final Service baseUrl;
+    private final String baseUrl;
 
+    public ProductServiceRestClient(RestTemplate http, String baseUrl) {
+        this.http = http;
+        this.baseUrl = baseUrl;
+    }
 
+    public Product fetchProduct(String productId) {
+        return http.getForObject(productUrl(productId), Product.class);
+    }
 
+    public URI productUrl(String productId) {
+        return URI.create(String.format("%s/products/%s", baseUrl, productId));
+    }
 }

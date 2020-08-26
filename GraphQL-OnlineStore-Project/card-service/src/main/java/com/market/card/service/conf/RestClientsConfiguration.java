@@ -19,6 +19,7 @@ public class RestClientsConfiguration {
         return new RestTemplate(new HttpComponentsClientHttpRequestFactory());
     }
 
+    @Bean
     public ProductServiceRestClient productServiceRestClient(){
         return new ProductServiceRestClient(restTemplate(), "http://localhost:9090");
     }

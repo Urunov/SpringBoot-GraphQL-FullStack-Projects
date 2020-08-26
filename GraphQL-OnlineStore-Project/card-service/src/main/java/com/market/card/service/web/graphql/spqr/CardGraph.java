@@ -1,10 +1,12 @@
 package com.market.card.service.web.graphql.spqr;
 
-import com.market.card.service.domain.CardService;
+import com.market.card.service.domain.Cart;
+import com.market.card.service.domain.CartService;
+import io.leangen.graphql.annotations.GraphQLArgument;
+import io.leangen.graphql.annotations.GraphQLQuery;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import javax.smartcardio.Card;
 
 /**
  * @Author: apple
@@ -15,24 +17,24 @@ import javax.smartcardio.Card;
 @Slf4j
 public class CardGraph {
 
-    private final CardService cardService;
+    private final CartService cartService;
 
 
-    public CardGraph(CardService cardService) {
-        this.cardService = cardService;
+    public CardGraph(CartService cartService) {
+        this.cartService = cartService;
     }
 
     @GraphQLQuery(name="card")
-    public Card card(@GraphQLArgument(name="id") Long id) {
+    public Cart cart(@GraphQLArgument(name="id") Long id) {
         log.info("fetching card with id={}", id);
-        return cardService.findCard(id);
+        return cartService.findCart(id);
     }
 
-    public Card addProductToCard(@GraphQLArgument(name="cardId") Long cardId,
-                                 @GraphQLArgument(name="productId") String productId,
-                                 @GraphQLArgument(name="quantity", defaultValue="1") int quantity) {
-
-        log.info("adding {} product(s) with id={} to card with id={}", quantity, productId, cardId);
-        return cardService.addProductToCard(cardId, productId, quantity);
+    public Cart addProductToCart(@GraphQLArgument(name = "cartId") Long cartId,
+                                 @GraphQLArgument(name = "productId") String productId,
+                                 @GraphQLArgument(name = "quantity", defaultValue = "1")  int quantity) {
+        log.info("adding {} product(s) with id={} to cart with id={}", quantity, productId, cartId);
+        return cartService.addProductToCart(cartId, productId, quantity);
     }
+
 }
