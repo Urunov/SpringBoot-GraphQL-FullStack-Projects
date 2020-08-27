@@ -6,12 +6,11 @@ import com.coxautodev.graphql.tools.GraphQLResolver;
 import com.market.card.service.domain.Cart;
 import com.market.card.service.domain.CartService;
 import com.market.card.service.domain.Item;
-import com.market.product.service.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
-
+import com.market.product.service.api.Product;
 import java.util.List;
 
 
@@ -49,8 +48,8 @@ public class GraphQLJavaConfig {
     @Bean
     public GraphQLResolver<Item> cartItemResolver(){
 
-        return new GraphQLResolver<Item>() {
-            public Product product(Item item) {
+       return new GraphQLResolver<Item>() {
+                public Product product(Item item) {
                 return http.getForObject("http://localhost:9090/products/{id}",
                         Product.class,
                         item.getProductId());
@@ -58,6 +57,7 @@ public class GraphQLJavaConfig {
         };
     }
 
+    @Bean
     public GraphQLResolver<Product> productResolver() {
         return new GraphQLResolver<Product>() {
            public List<String> images(Product product, int limit){
@@ -66,6 +66,7 @@ public class GraphQLJavaConfig {
         };
     }
 
+    @Bean
     public GraphQLMutationResolver mutations(){
         return new GraphQLMutationResolver() {
             public Cart addProductToCart(Long cartId, String productId, int quantity){

@@ -1,6 +1,6 @@
 package com.market.card.service.deps;
 
-import com.market.product.service.domain.Product;
+import com.market.product.service.api.Product;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;

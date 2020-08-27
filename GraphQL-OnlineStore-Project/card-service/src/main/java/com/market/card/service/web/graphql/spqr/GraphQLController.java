@@ -1,5 +1,6 @@
 package com.market.card.service.web.graphql.spqr;
 
+import graphql.ExecutionInput;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
 import graphql.analysis.MaxQueryComplexityInstrumentation;
@@ -13,14 +14,12 @@ import io.leangen.graphql.metadata.strategy.query.BeanResolverBuilder;
 import io.leangen.graphql.metadata.strategy.query.PublicResolverBuilder;
 import io.leangen.graphql.metadata.strategy.value.jackson.JacksonValueMapperFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -60,9 +59,9 @@ public class GraphQLController {
     @PostMapping(value = "/graphql", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public ExecutionResult execute(@RequestBody Map<String, Object> request) {
-        return graphQL.execute(ExecutionResult.newExecutionInput())
+        return graphQL.execute(ExecutionInput.newExecutionInput()
                 .query((String) request.get("query"))
-                .operationName(request.get("operationName"))
+                .operationName((String) request.get("operationName"))
                 .build());
     }
 }

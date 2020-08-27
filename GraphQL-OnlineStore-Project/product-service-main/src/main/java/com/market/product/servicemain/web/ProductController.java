@@ -39,25 +39,27 @@ public class ProductController {
         mapper.addMapping(new BeanMappingBuilder() {
             @Override
             protected void configure() {
-                mapping(Product.class, Product.class, TypeMappingOptions.oneWay());
+                mapping(com.market.product.servicemain.domain.Product.class, Product.class, TypeMappingOptions.oneWay());
             }
         });
     }
 
+    @RequestMapping
+    @ResponseBody
     public Products getProducts(@RequestParam(value = "ids", required = false) String rawIds,
                                 @RequestParam(value = "include", required = false) String rawFields) {
 
-        List<Product> products = StringUtils.isBlank(rawIds) ?
+        List<com.market.product.servicemain.domain.Product> products = StringUtils.isBlank(rawIds) ?
                 productRepository.findAllBy() :
                 productRepository.findAllByIdIn(rawIds.split(","));
 
-        Function<Product, Product> mapper = StringUtils.isBlank(rawFields) ?
+        Function<com.market.product.servicemain.domain.Product, Product> mapper = StringUtils.isBlank(rawFields) ?
                 this::toFullSingletonResource:
                 new FieldMapper(rawFields.split(","));
         return new Products(toListResource(products, mapper));
     }
 
-    private Product toFullSingletonResource(Product product) {
+    private Product toFullSingletonResource(com.market.product.servicemain.domain.Product product) {
         return mapper.map(product, Product.class);
     }
 
@@ -67,11 +69,11 @@ public class ProductController {
         return toFullSingletonResource(productRepository.findOne(id));
     }
 
-    private List<Product> toListResource(List<Product> products, Function<Product, Product> mapper) {
+    private List<Product> toListResource(List<com.market.product.servicemain.domain.Product> products, Function<com.market.product.servicemain.domain.Product, Product> mapper) {
         return products.stream().map(mapper).collect(toList());
     }
 
-    private static class FieldMapper implements Function<Product, Product> {
+    private static class FieldMapper implements Function<com.market.product.servicemain.domain.Product, Product> {
 
         private final String[] fields;
 
@@ -80,11 +82,11 @@ public class ProductController {
         }
 
         @Override
-        public Product apply(Product in) {
+        public Product apply(com.market.product.servicemain.domain.Product in) {
            Product out = new Product();
 
             Arrays.stream(fields).forEach(field -> {
-                PropertyDescriptor sourceDescriptor = BeanUtils.getPropertyDescriptor(Product.class, field);
+                PropertyDescriptor sourceDescriptor = BeanUtils.getPropertyDescriptor(com.market.product.servicemain.domain.Product.class, field);
                 Object value = ReflectionUtils.invokeMethod(sourceDescriptor.getReadMethod(), in);
 
                 PropertyDescriptor destDescriptor = BeanUtils.getPropertyDescriptor(Product.class, field);

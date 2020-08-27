@@ -14,4 +14,6 @@ public interface ProductRepository extends CrudRepository<Product, String>{
     List<Product> findAllBy();
 
     List<Product> findAllByIdIn(String[]ids);
+
+    Product findOne(String id);
 }

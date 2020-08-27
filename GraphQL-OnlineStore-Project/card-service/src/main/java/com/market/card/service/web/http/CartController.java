@@ -4,7 +4,7 @@ import com.market.card.service.deps.ProductServiceRestClient;
 import com.market.card.service.domain.Cart;
 import com.market.card.service.domain.CartService;
 import com.market.card.service.domain.Item;
-import com.market.product.service.domain.Product;
+import com.market.product.service.api.Product;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

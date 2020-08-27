@@ -1,8 +1,7 @@
 package com.market.card.service.domain;
 
 import com.market.card.service.deps.ProductServiceRestClient;
-
-import com.market.product.service.domain.Product;
+import com.market.product.service.api.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
