@@ -31,9 +31,11 @@ public class MutationResolver implements GraphQLMutationResolver {
     }
 
     public Product addProduct(String name, String code, Double price, Integer category_id) {
+
         Category category = categoryRepository.findById(category_id).orElseGet(null);
 
         Product product = new Product();
+
         product.setId(category_id);
         product.setCode(code);
         product.setPrice(price);
@@ -71,5 +73,4 @@ public class MutationResolver implements GraphQLMutationResolver {
        productRepository.deleteById(id);
         return true;
     }
-
 }

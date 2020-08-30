@@ -20,7 +20,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class QueryResolver implements GraphQLQueryResolver {
 
-//https://github.com/roytuts/graphql/blob/master/spring-graphql-crud/src/main/java/com/roytuts/spring/graphql/crud/resolver/QueryResolver.java
     private final CategoryRepository categoryRepository;
     private final ProductRepository productRepository;
 

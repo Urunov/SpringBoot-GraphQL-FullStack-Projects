@@ -23,20 +23,19 @@ public class Product implements Serializable {
 
     private Double price;
 
+    private String name;
+
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false, updatable = false)
-    public Category getCategory() {
+    private Category category;
+
+     public Category getCategory() {
         return category;
     }
 
     public void setCategory(Category category) {
         this.category = category;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false, updatable = false)
-    private Category category;
-
 
 
     @Override
@@ -75,5 +74,13 @@ public class Product implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

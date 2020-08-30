@@ -2,6 +2,7 @@ package com.urunov.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @Author: apple
@@ -37,4 +38,8 @@ public class Category implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    @OneToMany()
+    private List<Product> product;
+
 }

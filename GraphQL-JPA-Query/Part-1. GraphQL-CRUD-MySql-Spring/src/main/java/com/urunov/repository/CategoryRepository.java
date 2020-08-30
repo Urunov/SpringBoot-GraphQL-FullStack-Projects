@@ -1,6 +1,6 @@
 package com.urunov.repository;
 
-import com.urunov.entity.Product;
+import com.urunov.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @created on 29/08/2020
  * @Project is Crud
  */
-public interface CategoryRepository extends JpaRepository<Product, Integer> {
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
 }
