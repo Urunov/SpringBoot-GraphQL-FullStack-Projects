@@ -37,6 +37,7 @@ public class MutationResolver implements GraphQLMutationResolver {
         Product product = new Product();
 
         product.setId(category_id);
+        product.setName(name);
         product.setCode(code);
         product.setPrice(price);
         product.setCategory(category);
@@ -56,6 +57,7 @@ public class MutationResolver implements GraphQLMutationResolver {
         Category category = categoryRepository.findById(category_id).orElseGet(null);
 
         Product product = new Product();
+
         product.setId(category_id);
         product.setCode(code);
         product.setPrice(price);
