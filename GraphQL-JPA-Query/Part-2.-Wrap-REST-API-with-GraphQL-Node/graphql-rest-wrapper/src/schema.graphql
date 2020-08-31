@@ -1,0 +1,17 @@
+
+type Query {
+    websites: [Website!]
+    website(id: ID!): Website
+}
+
+type Mutation{
+    addWebsite(name: String!, url: String!): String!
+    updateWebsite(id: ID!, name: String!, url: String!): String!
+    deleteWebsite(id: ID!): String!
+}
+
+type Website{
+    id: ID
+    name: String
+    url: String
+}

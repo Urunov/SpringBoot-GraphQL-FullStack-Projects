@@ -1,0 +1,16 @@
+{
+  "name": "graphql-rest-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "^1.18.0",
+    "node-fetch": "^2.6.0"
+  }
+}
