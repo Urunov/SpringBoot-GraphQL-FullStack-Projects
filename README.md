@@ -32,3 +32,4 @@ Resource:
  3. [Graphql Kickstart important](https://graphql-java-kickstart.com/tools/schema-definition/)
  4. [GraphQL Schema](https://www.tutorialspoint.com/graphql/graphql_schema.htm)
  5. [Spring Boot GraphQL Error Handling and Secure ](https://medium.com/@philippechampion58/testing-your-graphql-apis-in-a-spring-boot-app-9fe02ebccc35)
+ 6. [Awesome GraphQL and Resources](https://github.com/merapar/awesome-graphql)
