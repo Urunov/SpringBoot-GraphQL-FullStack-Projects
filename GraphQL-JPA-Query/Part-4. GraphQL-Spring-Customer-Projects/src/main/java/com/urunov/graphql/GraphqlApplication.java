@@ -1,16 +1,13 @@
-package com.urunov.wrap;
+package com.urunov.graphql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WrapApplication {
+public class GraphqlApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WrapApplication.class, args);
+        SpringApplication.run(GraphqlApplication.class, args);
     }
 
 }
-
-
-//https://www.roytuts.com/wrap-rest-api-with-graphql-in-spring-boot/

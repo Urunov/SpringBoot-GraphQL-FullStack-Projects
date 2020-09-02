@@ -28,7 +28,7 @@ public class GraphQLProvider {
     private GraphQLDataFetcher dataFetcher;
 
     public void init() throws IOException {
-        final Resource resource = new ClassPathResource("schema.graphql");
+        final Resource resource = new ClassPathResource("schema.graphqls");
         String sdl = null;
 
         try {
