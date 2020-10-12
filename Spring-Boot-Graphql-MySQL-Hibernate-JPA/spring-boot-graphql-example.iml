@@ -7,6 +7,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" />
+          <factory-entry name="spring-boot-graphql-example" value="13cea47c-f3aa-4815-a754-b0734dbf872d" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
