@@ -27,7 +27,7 @@
 Resource: 
  1. [Getting started with GraphQL Java and Spring Boot](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/#try-out-the-api)
  2. [GraphQL Architecture](https://www.howtographql.com/basics/3-big-picture/)
- 3. [Graphql Kickstart important](https://graphql-java-kickstart.com/tools/schema-definition/)
+ 3. [Graphql Kickstart important](https://www.graphql-java-kickstart.com/tools/schema-definition/)
  4. [GraphQL Schema](https://www.tutorialspoint.com/graphql/graphql_schema.htm)
  5. [Spring Boot GraphQL Error Handling and Secure ](https://medium.com/@philippechampion58/testing-your-graphql-apis-in-a-spring-boot-app-9fe02ebccc35)
  6. [Awesome GraphQL and Resources](https://github.com/merapar/awesome-graphql)
